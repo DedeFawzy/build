@@ -830,20 +830,19 @@ else if get_stage("%(bcb_dev)s") == "3/3" then
 
   android_version = target_info.GetBuildProp("ro.build.version.release")
   build_id = target_info.GetBuildProp("ro.build.id")
-  build_date = target_info.GetBuildProp("org.pixelexperience.build_date")
+  build_date = target_info.GetBuildProp("org.cesium.build_date")
   security_patch = target_info.GetBuildProp("ro.build.version.security_patch")
-  device = target_info.GetBuildProp("org.pixelexperience.device")
+  device = target_info.GetBuildProp("org.cesium.device")
 
-  script.Print("----------------------------------------------");
-  script.Print("              Pixel Experience");
-  script.Print("               by jhenrique09");
-  script.Print("----------------------------------------------");
-  script.Print(" Android version: %s"%(android_version));
-  script.Print(" Build id: %s"%(build_id));
-  script.Print(" Build date: %s"%(build_date));
-  script.Print(" Security patch: %s"%(security_patch));
-  script.Print(" Device: %s"%(device));
-  script.Print("----------------------------------------------");
+script.Print("                                                                 ")
+script.Print("_________               .__               ________    _________  ")
+script.Print("\_   ___ \  ____   _____|__|__ __  _____  \_____  \  /   _____/  ")
+script.Print("/    \  \/_/ __ \ /  ___/  |  |  \/     \  /   |   \ \_____  \   ")
+script.Print("\     \___\  ___/ \___ \|  |  |  /  Y Y  \/    |    \/        \  ")
+script.Print(" \______  /\___  >____  >__|____/|__|_|  /\_______  /_______  /  ")
+script.Print("       \/     \/     \/               \/         \/        \/    ")
+script.Print("                       | CesiumOS |                              ")
+script.Print("                                                                 ")
   device_specific.FullOTA_InstallBegin()
 
   CopyInstallTools(output_zip)
